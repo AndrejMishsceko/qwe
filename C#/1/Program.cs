@@ -190,20 +190,55 @@
 // Console.WriteLine(max);
 // Console.WriteLine();
 
-int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-int n = array.Length;
-int find = 4;
-int index = 0;
-while (index < n) ;
+// int[] array = { 1, 2, 3, 4, 5, 6, 7, 9, 9 };
+// int n = array.Length;
+// int find = 9;
+// int index = 0;
+// while (index < n)
+// {
+//     if (array[index] == find)
+//     {
+
+//         Console.WriteLine(index);
+//         break;
+
+
+
+//     }
+//     index++;
+// }
+
+
+
+
+// генератор чисел массива(Метод)
+
+
+
+
+void FillArray(int[] collection)
 {
-    if (array[index] == find)
+    int Length = collection.Length;
+    int index = 0;
+    while ( index < Length)
     {
-
-        Console.WriteLine(index);
-
-
+      collection[index] = new Random().Next(1, 10);
+      index++;
     }
-    index++;
+}
+void PrintArray(int[] col)
+{
+    int count = col.Length;
+    int position = 0;
+    while(position<count)
+    {
+        Console.WriteLine(col[position]);
+        position++;
+    }
+   
 }
 
+int[] array = new int[10];
 
+FillArray(array);
+PrintArray(array);
