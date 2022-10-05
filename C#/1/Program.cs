@@ -159,31 +159,51 @@
 
 // МАССИВЫ
 
-int Max(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12)
+// int Max(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7, int arg8, int arg9, int arg10, int arg11, int arg12)
+// {
+//     int resalt = arg1;
+//     if (arg1 > resalt) resalt = arg1;
+//     if (arg2 > resalt) resalt = arg2;
+//     if (arg3 > resalt) resalt = arg3;
+//     if (arg4 > resalt) resalt = arg4;
+//     if (arg5 > resalt) resalt = arg5;
+//     if (arg6 > resalt) resalt = arg6;
+//     if (arg7 > resalt) resalt = arg7;
+//     if (arg8 > resalt) resalt = arg8;
+//     if (arg9 > resalt) resalt = arg9;
+//     if (arg10 > resalt) resalt = arg10;
+//     if (arg11 > resalt) resalt = arg11;
+//     if (arg12 > resalt) resalt = arg12;
+//     return resalt;
+// }
+
+// int[] array = { 14, 12, 131, 45, 53, 76, 75, 8, -99999, 1550, 1451, 1452 };
+
+// // array[0] = 9999;
+// Console.WriteLine(array[0]);
+
+// int max = Max(array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], array[8], array[9], array[10], array[11]);
+
+
+
+// Console.Write("max =  ");
+// Console.WriteLine(max);
+// Console.WriteLine();
+
+int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int n = array.Length;
+int find = 4;
+int index = 0;
+while (index < n) ;
 {
-    int resalt = arg1;
-    if (arg1 > resalt) resalt = arg1;
-    if (arg2 > resalt) resalt = arg2;
-    if (arg3 > resalt) resalt = arg3;
-    if (arg4 > resalt) resalt = arg4;
-    if (arg5 > resalt) resalt = arg5;
-    if (arg6 > resalt) resalt = arg6;
-    if (arg7 > resalt) resalt = arg7;
-    if (arg8 > resalt) resalt = arg8;
-    if (arg9 > resalt) resalt = arg9;
-    if (arg10 > resalt) resalt = arg10;
-    if (arg11 > resalt) resalt = arg11;
-    if (arg12 > resalt) resalt = arg12;
-    return resalt;
+    if (array[index] == find)
+    {
+
+        Console.WriteLine(index);
+
+
+    }
+    index++;
 }
 
-int[] array = { 14, 12, 131, 45, 53, 76, 75, 8, 99999, 1550, 1451, 1452 };
 
-
-int max = Max(array[0], array[1], array[2], array[3], array[4], array[5], array[6], array[7], array[8], array[9], array[10], array[11]);
-
-
-
-Console.Write("max =  ");
-Console.WriteLine(max);
-Console.WriteLine();
