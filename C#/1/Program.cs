@@ -338,36 +338,71 @@
 // }
 
 
-// Задача по поиску и замене символов в тексте
+// // Задача по поиску и замене символов в тексте
+
+// string text = "В окне «Проблемы» Visual Studio обнаружена проблема с «удаленным» файлом."
+//             + "образом VS оставил окно открытым для исходного местоположения файла, и на"
+//             + "файл был помечен как «удаленный». Закрытие этой вкладки в VS избавило от "
+//             + "Эта ошибка возникает из-за ожидающих изменений в git, поэтому для решения этой "
+//             + "откройте командный терминал и перейдите в папку, в которой находится ваш проект,"
+//             + "откройте командный терминал и перейдите в папку, в которой находится ваш проект,";
+
+// string Replace(string text, char oldValue, char newValue)
+// {
+//     string resalt = String.Empty;
+//     int length = text.Length;
+//     for (int i = 0; i < length; i++)
+//     {
+//         if (text[i] == oldValue) resalt = resalt + $"{newValue}";
+//         else resalt = resalt + $"{text[i]}";
+//     }
+//     return resalt;
+// }
+// string newText = Replace(text, ' ', '*');
+// Console.WriteLine(newText);
+// Console.WriteLine();
+// newText= Replace(newText, 'о', 'О');
+// Console.WriteLine(newText);
+// Console.WriteLine();
+// newText= Replace(newText, 'в', 'В');
+// Console.WriteLine(newText);
 
 
+int[] arr = { 1, 2, 3, 4, 5, 6, 7, 9, 12, 12, 1, 1112221, 1, 1556, 8, 464, 8, 49, 561, 48, 1, 1, };
 
-string text = "В окне «Проблемы» Visual Studio обнаружена проблема с «удаленным» файлом."
-            + "образом VS оставил окно открытым для исходного местоположения файла, и на"
-            + "файл был помечен как «удаленный». Закрытие этой вкладки в VS избавило от "
-            + "Эта ошибка возникает из-за ожидающих изменений в git, поэтому для решения этой "
-            + "откройте командный терминал и перейдите в папку, в которой находится ваш проект,"
-            + "откройте командный терминал и перейдите в папку, в которой находится ваш проект,";
-
-string Replace(string text, char oldValue, char newValue)
+void PrintArray(int[] array)
 {
-    string resalt = String.Empty;
-    int length = text.Length;
-    for (int i = 0; i < length; i++)
+    int count = array.Length;
+    for (int i = 0; i < count; i++)
     {
-        if (text[i] == oldValue) resalt = resalt + $"{newValue}";
-        else resalt = resalt + $"{text[i]}";
-
+        Console.Write($"{array[i]} ");
     }
-
-    return resalt;
-
+    Console.WriteLine();
 }
-string newText = Replace(text, ' ', '*');
-Console.WriteLine(newText);
-Console.WriteLine();
-newText= Replace(newText, 'о', 'О');
-Console.WriteLine(newText);
-Console.WriteLine();
-newText= Replace(newText, 'в', 'В');
-Console.WriteLine(newText);
+
+void SelectionSort(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+        int minPosition = i;
+
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] < array[minPosition]) minPosition = j;
+        }
+        int temporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = temporary;
+    }
+}
+
+
+PrintArray(arr);
+
+SelectionSort(arr);
+PrintArray(arr);
+
+
+
+
+
