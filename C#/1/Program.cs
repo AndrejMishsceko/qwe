@@ -202,8 +202,6 @@
 //         Console.WriteLine(index);
 //         break;
 
-
-
 //     }
 //     index++;
 // }
@@ -211,53 +209,120 @@
 
 
 
-// (Метод)
 
-void FillArray(int[] collection)
+
+
+// // (Метод)
+
+// void FillArray(int[] collection)
+// {
+//     int Length = collection.Length;
+//     int index = 0;
+//     while ( index < Length)
+//     {
+//       collection[index] = new Random().Next(1, 10);
+//       index++;
+//     }
+// }
+// void PrintArray(int[] col)
+// {
+//     int count = col.Length;
+//     int position = 0;
+//     while(position<count)
+//     {
+//         Console.WriteLine(col[position]);
+//         position++;
+//     }
+
+// }
+
+// int IndexOf(int[]collection, int find)
+// {
+//     int count = collection.Length;
+//     int index = 0;
+//     int position = -1;
+//     while(index<count)
+//     {
+//         if(collection[index]==find)
+//         {
+//             position=index;
+//             break;
+//         }
+//         index++;
+//     }
+//     return position;
+// }
+// int[] array = new int[10];
+
+// FillArray(array);
+// PrintArray(array);
+// Console.WriteLine();
+
+// int pos = IndexOf(array, 4);
+// Console.WriteLine(pos);
+
+
+// МЕТОДЫ (1 метод)
+// // ВИД№1
+// void Method1()
+// {
+//     Console.WriteLine("Мищенко А.В.");
+// }
+// // Method1();
+
+
+// // ВИД2
+
+// void Method2(string msg, int count)
+// {
+//     int i = 0;
+//     while (i < count)
+//     {
+//         Console.WriteLine(msg);
+//         i++;
+//     }
+//     Console.WriteLine(msg);
+// }
+// Method2("Ntr",6);
+
+
+
+// //ВИД 3
+
+// int Method3()
+// {
+//     return DateTime.Now.Year;
+// }
+// int year = Method3();
+// Console.WriteLine(year);
+
+//ВИД 4
+// string Method4(int count, string text)
+// {
+//     int i = 0;
+//     string result = String.Empty;
+
+//     while(i<count)
+//     {
+//         result = result + text;
+//         i++;
+//     }
+//     return result;
+// }
+// string res = Method4(10,"ntr");
+// Console.WriteLine(res);
+
+
+string Method4(int count, string text)
 {
-    int Length = collection.Length;
-    int index = 0;
-    while ( index < Length)
+    string result = String.Empty;
+    for (int i = 0; i < count; i++)
     {
-      collection[index] = new Random().Next(1, 10);
-      index++;
+        result = result + text;
     }
+    return result;
 }
-void PrintArray(int[] col)
-{
-    int count = col.Length;
-    int position = 0;
-    while(position<count)
-    {
-        Console.WriteLine(col[position]);
-        position++;
-    }
-   
-}
-
-int IndexOf(int[]collection, int find)
-{
-    int count = collection.Length;
-    int index = 0;
-    int position = -1;
-    while(index<count)
-    {
-        if(collection[index]==find)
-        {
-            position=index;
-            break;
-        }
-        index++;
-    }
-    return position;
-}
-int[] array = new int[10];
-
-FillArray(array);
-PrintArray(array);
-Console.WriteLine();
-
-int pos = IndexOf(array, 4);
-Console.WriteLine(pos);
+string res = Method4(10, "ntr");
+Console.WriteLine(res);
 
 
