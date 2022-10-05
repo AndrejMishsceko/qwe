@@ -313,16 +313,61 @@
 // Console.WriteLine(res);
 
 
-string Method4(int count, string text)
+// string Method4(int count, string text)
+// {
+//     string result = String.Empty;
+//     for (int i = 0; i < count; i++)
+//     {
+//         result = result + text;
+//     }
+//     return result;
+// }
+// string res = Method4(10, "ntr");
+// Console.WriteLine(res);
+
+
+// //  Цикл FOR Таблица умножения
+
+// for (int i = 2; i <= 10; i++)
+// {
+//     for (int j = 2; j < 10; j++)
+//     {
+//         Console.WriteLine($"{i} x {j} = {i*j}");
+//     }
+//     Console.WriteLine();
+// }
+
+
+// Задача по поиску и замене символов в тексте
+
+
+
+string text = "В окне «Проблемы» Visual Studio обнаружена проблема с «удаленным» файлом."
+            + "образом VS оставил окно открытым для исходного местоположения файла, и на"
+            + "файл был помечен как «удаленный». Закрытие этой вкладки в VS избавило от "
+            + "Эта ошибка возникает из-за ожидающих изменений в git, поэтому для решения этой "
+            + "откройте командный терминал и перейдите в папку, в которой находится ваш проект,"
+            + "откройте командный терминал и перейдите в папку, в которой находится ваш проект,";
+
+string Replace(string text, char oldValue, char newValue)
 {
-    string result = String.Empty;
-    for (int i = 0; i < count; i++)
+    string resalt = String.Empty;
+    int length = text.Length;
+    for (int i = 0; i < length; i++)
     {
-        result = result + text;
+        if (text[i] == oldValue) resalt = resalt + $"{newValue}";
+        else resalt = resalt + $"{text[i]}";
+
     }
-    return result;
+
+    return resalt;
+
 }
-string res = Method4(10, "ntr");
-Console.WriteLine(res);
-
-
+string newText = Replace(text, ' ', '*');
+Console.WriteLine(newText);
+Console.WriteLine();
+newText= Replace(newText, 'о', 'О');
+Console.WriteLine(newText);
+Console.WriteLine();
+newText= Replace(newText, 'в', 'В');
+Console.WriteLine(newText);
