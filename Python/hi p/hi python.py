@@ -35,8 +35,12 @@
 #         num=i
 # print(num)
 
-i = -6 
-while i < 6 :  
-    print(i)  
-    i += 1
+# i = -6 
+# while i < 6 :  
+#     print(i)  
+#     i += 1
 
+captains = ['Janeway', 'Picard', 'Sisko']
+ 
+for captain in captains:
+    print(captain)
