@@ -6,18 +6,18 @@
 #- 197.45 -> 27
 #                                        Решение:
 
-# from unittest import result
-# n= input("Введите писло: ")
-# while not n.isdigit():
-#     n = input(" Введите положительное число: ")
-# n = int(n)
-# def digit_sum(n):
-#     n_lst = list(str(n))
-#     n_sum = 0
-#     for i in range(len(n_lst)):
-#         n_sum += int(n_lst[i])
-#     return n_sum
-# print ("Сумма цифр:",n,"=",digit_sum(n),)   
+from unittest import result
+n= input("Введите двузначное писло: ")
+while not n.isdigit():
+    n = input(" Введите положительное число: ")
+n = int(n)
+def digit_sum(n):
+    n_lst = list(str(n))
+    n_sum = 0
+    for i in range(len(n_lst)):
+        n_sum += int(n_lst[i])
+    return n_sum
+print ("Сумма цифр:",n,"=",digit_sum(n),)   
 
 
 
