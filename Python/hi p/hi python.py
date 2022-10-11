@@ -40,7 +40,7 @@
 #     print(i)  
 #     i += 1
 
-captains = ['Janeway', 'Picard', 'Sisko']
+# captains = ['Janeway', 'Picard', 'Sisko']
  
-for captain in captains:
-    print(captain)
+# for captain in captains:
+#     print(captain)
