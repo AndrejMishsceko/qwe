@@ -37,7 +37,7 @@
 #                 break
 #         if(count == 1):
 #             lst.append(i)
-# # print(lst)
+# print(lst)
 
 # #####                                    Решение: 3
 # import math
